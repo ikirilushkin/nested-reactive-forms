@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "nrf",
       "schematics": {},
       "architect": {
         "build": {
@@ -83,9 +83,9 @@
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
+          "options": {compo
+            "tsConfig":compo [
+              "src/tscocomponfig.app.json",
               "src/tsconfig.spec.json"
             ],
             "exclude": [
