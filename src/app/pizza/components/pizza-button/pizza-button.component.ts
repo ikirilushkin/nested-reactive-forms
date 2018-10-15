@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'nrf-pizza-button',
   templateUrl: './pizza-button.component.html',
-  styleUrls: ['./pizza-button.component.css']
+  styleUrls: ['./pizza-button.component.scss']
 })
-export class PizzaButtonComponent implements OnInit {
+export class PizzaButtonComponent {
+  @Input()
+  parent: FormGroup;
 
-  constructor() { }
+  @Output()
+  add = new EventEmitter<any>();
 
-  ngOnInit() {
+  onClick() {
+    this.add.emit();
   }
-
 }
+

@@ -1,3 +1,6 @@
-<p>
-  pizza-form works!
-</p>
+<form [formGroup]="form">
+  <nrf-toppings-selector [parent]="form" [selected]="control.value" [toppings]="toppings" (select)="selectTopping($event)"></nrf-toppings-selector>
+  <!--<nrf-pizza-name></nrf-pizza-name>-->
+  <!--<nrf-pizza-selected></nrf-pizza-selected>-->
+  <nrf-pizza-button [parent]="form" (add)="onSubmit()">Add pizza</nrf-pizza-button>
+</form>

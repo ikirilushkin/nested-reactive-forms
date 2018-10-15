@@ -1,3 +1,7 @@
-<p>
-  pizza-list works!
-</p>
+<div class="pizza-list">
+  <h2>Store Inventory</h2>
+  <div *ngFor="let pizza of pizzas">
+    <p>{{ 'title: ' + pizza.name }}</p>
+    <span>{{ pizza.toppings | join }}</span>
+  </div>
+</div>
